@@ -1,5 +1,6 @@
 import React from 'react';
-import Parent from './Component/Class/Parent';
+import BootstrapComp from './Component/Class/BootstrapComp';
+//import Parent from './Component/Class/Parent';
 // import logo from './logo.svg';
 // import './App.css';
 // import Home from './Component/Fungsional/Home';
@@ -8,7 +9,7 @@ import Parent from './Component/Class/Parent';
 function App() {
   return (
     <div className="App">
-      <Parent/>
+      <BootstrapComp/>
     </div>
   );
 }
