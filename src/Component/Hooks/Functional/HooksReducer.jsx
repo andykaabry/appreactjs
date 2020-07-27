@@ -13,11 +13,11 @@ function HooksReducer() {
             <Row>
                 <Col xs="6">
                     <Card>
-                        <CardImg top width="100%" src="https://placeimg.com/640/480/tech" alt="Card image cap" />
+                        <CardImg top width="100%" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQguJNI_Mfw8wIuOZ7xxBlpfAbNxtlpSTOevGTr1X7B-mvK7ffBhd1AEp9ujOezzyBHXfDADHFLa17WHln-WCP85in30mb4vARqu0-oVI4&usqp=CAE" alt="Card image cap" />
                     </Card>
                 </Col>
                 <Col xs="6">
-                    <h3>ASUS PRO</h3>
+                    <h3>Helm Retro Momo KP 08 Coklat Dop</h3>
                     <p>Harga</p>
                     <h3>Rp. {countContext.keranjangState.hargatotal}</h3>
                     <p>Jumlah</p>

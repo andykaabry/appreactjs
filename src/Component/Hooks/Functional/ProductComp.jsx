@@ -10,9 +10,6 @@ function ProductComp(){
                 <h2>Produk</h2>
                 <Row>
                     <RowProduct/>
-                    <RowProduct/>
-                    <RowProduct/>
-
                 </Row>
             </Container>
         </div>

@@ -15,29 +15,45 @@ import {
 } from 'reactstrap';
 import {NavLink} from 'react-router-dom'
 import { CartContext } from '../../CartContext';
+import { AuthContext } from '../../App';
 
 const NavbarComp = (props) => {
+    
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
-    const {value, setValue} = useContext(CartContext)
+    const {state, dispatch} = useContext(AuthContext)
 
     return (
         <div>
-            <Navbar color="light" light expand="md">
-                <NavbarBrand to="/">reactstrap</NavbarBrand>
+
+            <p class="bg-primary text-green"><marquee>Selamat Datang Di Habitat Helm</marquee> </p>
+            <Navbar className="navbar-dark bg-dark" blue expand="md">
+                <NavbarBrand to="/">HABITAT HELM</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink to="/" className="nav-link">Home</NavLink>
+                            <NavLink to="/dashboard" className="nav-link">Dashboard</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="/about" className="nav-link">About</NavLink>
+                            <NavLink to="/barang" className="nav-link">Data Barang</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="/mahasiswa" className="nav-link">Mahasiswa</NavLink>
+                            <NavLink to="/supplier" className="nav-link">Data Supplier</NavLink>
                         </NavItem>
+                        <NavItem>
+                            <NavLink to="/produk" className="nav-link">Produk</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink to="/about" className="nav-link">Tentang Kami</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink to="/logout" className="nav-link">Logout</NavLink>
+                        </NavItem>
+
+
+                        {/*
                         <NavItem>
                             <NavLink to="/kelas" className="nav-link">Class</NavLink>
                         </NavItem>
@@ -47,18 +63,20 @@ const NavbarComp = (props) => {
                         <NavItem>
                             <NavLink to="/useeffects" className="nav-link">Use Effects</NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink to="/produk" className="nav-link">Produk</NavLink>
-                        </NavItem>
-                        <NavItem>
+                         <NavItem>
                             <NavLink to="/reducer" className="nav-link">Reducer</NavLink>
-                        </NavItem>
+                        </NavItem>*/}
                     </Nav>
 
                     <NavbarText>
-                        <Button color="danger">
-                            <i className=" fa fa-shopping-cart"></i>
-                            <span className="badge badge-light">{value}</span>
+                        <Button color="default">
+                        onClick={()=>
+                        dispatch({
+                            type:"LOGOUT"
+                        })}>
+                            {state.isAuthenticated && (
+                                <NavLink>"LOGOUT"</NavLink>
+                            )}
                         </Button>
                     </NavbarText>
                 </Collapse>

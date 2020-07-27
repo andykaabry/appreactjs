@@ -31,7 +31,7 @@ class Produk extends Component {
         return (
             <div className="box-stock">
                 <h2>{this.props.nama}</h2>
-                <img src="https://d2pa5gi5n2e1an.cloudfront.net/global/images/product/laptops/ASUS_ROG_Zephyrus_Duo_15_ph/ASUS_ROG_Zephyrus_Duo_15_ph_L_1.jpg" alt=""/>
+                <img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/9/27/6892462/6892462_c27ca810-6383-4941-8bbd-742888509345.jpg" alt=""/>
                 <p><b>Rp. {this.props.harga}</b></p>
                 <p>{this.state.stock}</p>
                 <button className="btn-click" onClick={this.ButtonBeli} disabled={this.state.disabled}>Beli</button>

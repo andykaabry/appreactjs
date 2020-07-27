@@ -1,16 +1,30 @@
 import React from 'react'
-import Produk from '../Class/Produk';
-//import Blog from './Blog'
 
-const Home = () => {
-    return <div>
-    <Produk nama="Asus ROG 2020" stock="10" harga="24000000"/>
-    <Produk nama="Asus ROG 2019" stock="15" harga="23000000"/>
-    <Produk nama="Asus ROG 2018" stock="12" harga="21000000"/>
-    <Produk nama="Asus ROG 2017" stock="19" harga="19000000"/>
-    <Produk nama="Asus ROG 2016" stock="17" harga="18000000"/>
-    <Produk nama="Asus ROG 2015" stock="14" harga="17000000"/>
-    </div>
+import { UncontrolledCarousel } from 'reactstrap';
 
-}
+const items = [
+
+     {
+       src: 'http://hd.wallpaperswide.com/thumbs/downhill_biking_helmet-t2.jpg',
+
+       altText: 'Slide 1',
+       caption: '',
+       header: 'H A B I T A T',
+       key: '1'
+     },
+     {
+       src: 'https://images.hdqwalls.com/wallpapers/ktm-helmet-image.jpg',
+       altText: 'Slide 2',
+       caption: '',
+       header: 'H E L M',
+       key: '2'
+    },
+     {
+
+     }
+
+   ];
+
+   const Home = () => <UncontrolledCarousel items={items} />;
+
 export default Home;

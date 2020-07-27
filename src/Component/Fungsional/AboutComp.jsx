@@ -8,21 +8,25 @@ function AboutComp () {
     return (
         <div>
             <Jumbotron>
-                <h1 className="display-3">About Us </h1>
-                <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+                <h1 className="display-3">Selamat Datang Di Habitat Helm</h1>
+                <p className="lead">Alamat   : Jln.Damai No.86 Purwokerto, Banyumas, Jawa Tengah </p>
+                <p className="lead">No Telp  : +6285155429567 </p>
+                <p className="lead">Habitat Helm merupakan Online Shop penjualan Helm, Yang bertujuan mempermudah konsumen dalam melakukan kegiatan transaksi pembelian helm dibandingkan dengan membeli secara langsung ke Toko.</p>
                 <hr className="my-2" />
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                 <p className="lead">
-                    <Button color="primary">Learn More</Button>
+
                 </p>
+
             </Jumbotron>
+
             <Container>
                 <Row>
-                    <Col><CardComp id="1" judul="Belajar React" tanggal="20/06/2020"/></Col>
-                    <Col><CardComp id="2" judul="Belajar Restapi" tanggal="19/06/2020"/></Col>
-                    <Col><CardComp id="3" judul="Belajar PHP" tanggal="18/06/2020"/></Col>
+                    <Col><CardComp id="1" Nama="Andika Abri Rama" Alamat="Purwokerto, Jawa Tengah"/></Col>
+
                 </Row>
+
             </Container>
+
         </div>
     )
 }
